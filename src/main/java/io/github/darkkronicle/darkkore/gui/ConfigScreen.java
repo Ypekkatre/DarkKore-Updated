@@ -56,7 +56,7 @@ public class ConfigScreen extends ComponentScreen {
             }
             return new ConfigScreen(tabs);
         }
-        return new ConfigScreen(List.of(Tab.ofOptions(new Identifier(DarkKore.MOD_ID, "main"), "main", sections)));
+        return new ConfigScreen(List.of(Tab.ofOptions(Identifier.of(DarkKore.MOD_ID, "main"), "main", sections)));
     }
 
     public static ConfigScreen ofSections(List<OptionSection> sections) {
@@ -81,14 +81,14 @@ public class ConfigScreen extends ComponentScreen {
                 OptionSection sect = (OptionSection) opt;
                 nest.add(populate(sect));
             }
-            return Tab.ofTabs(new Identifier(DarkKore.MOD_ID, section.getKey().toLowerCase(Locale.ROOT)), section.getNameKey(), nest);
+            return Tab.ofTabs(Identifier.of(DarkKore.MOD_ID, section.getKey().toLowerCase(Locale.ROOT)), section.getNameKey(), nest);
         }
-        return Tab.ofOptions(new Identifier(DarkKore.MOD_ID, section.getKey().toLowerCase(Locale.ROOT)), section.getNameKey(), section.getOptions());
+        return Tab.ofOptions(Identifier.of(DarkKore.MOD_ID, section.getKey().toLowerCase(Locale.ROOT)), section.getNameKey(), section.getOptions());
     }
 
     public static ConfigScreen ofOptions(List<Option<?>> options) {
         List<Tab> tabs = new ArrayList<>();
-        tabs.add(Tab.ofOptions(new Identifier(DarkKore.MOD_ID, "main"), "main", options));
+        tabs.add(Tab.ofOptions(Identifier.of(DarkKore.MOD_ID, "main"), "main", options));
         return new ConfigScreen(tabs);
     }
 

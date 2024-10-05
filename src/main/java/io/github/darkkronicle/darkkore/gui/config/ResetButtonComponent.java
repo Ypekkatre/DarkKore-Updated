@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 
 public class ResetButtonComponent extends IconButtonComponent {
 
-    private static final Identifier ADD_ICON = new Identifier(DarkKore.MOD_ID, "textures/gui/icons/refresh.png");
+    private static final Identifier ADD_ICON = Identifier.of(DarkKore.MOD_ID, "textures/gui/icons/refresh.png");
 
     public ResetButtonComponent(Screen parent, int size, Color background, Color hover, Consumer<ButtonComponent> onClick) {
         super(parent, null, size, size, 48, 48, background, hover, onClick);

@@ -16,3 +16,6 @@ bin/
 .classpath
 .project
 *.launch
+*.un
+*~
+

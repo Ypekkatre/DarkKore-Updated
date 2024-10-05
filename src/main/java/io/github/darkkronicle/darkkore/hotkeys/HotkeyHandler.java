@@ -33,7 +33,7 @@ public class HotkeyHandler implements InputEvent {
     private final List<Integer> keysPressed = new ArrayList<>();
 
     public boolean contains(String modId, String name) {
-        return hotkeys.containsKey(new Identifier(modId, name));
+        return hotkeys.containsKey(Identifier.of(modId, name));
     }
 
     /**
@@ -47,7 +47,7 @@ public class HotkeyHandler implements InputEvent {
     }
 
     public Supplier<List<Hotkey>> get(String modId, String name) {
-        return hotkeys.get(new Identifier(modId, name));
+        return hotkeys.get(Identifier.of(modId, name));
     }
 
     /**
@@ -58,12 +58,12 @@ public class HotkeyHandler implements InputEvent {
      * @param hotkeySupplier A supplier
      */
     public void add(String modId, String name, Supplier<List<Hotkey>> hotkeySupplier) {
-        hotkeys.put(new Identifier(modId, name), hotkeySupplier);
+        hotkeys.put(Identifier.of(modId, name), hotkeySupplier);
         rebuildHotkeys();
     }
 
     public void remove(String modId, String name) {
-        hotkeys.remove(new Identifier(modId, name));
+        hotkeys.remove(Identifier.of(modId, name));
         rebuildHotkeys();
     }
 

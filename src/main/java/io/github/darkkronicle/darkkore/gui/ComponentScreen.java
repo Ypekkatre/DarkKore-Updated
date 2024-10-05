@@ -58,8 +58,9 @@ public abstract class ComponentScreen extends Screen {
         if (client.world != null) {
             RenderUtil.drawRectangle(context, 0, 0, this.width, this.height, backgroundColor);
         } else {
-            renderBackgroundTexture(context);
-        }
+            //renderBackgroundTexture(context);
+	    renderBackground(context, mouseX, mouseY, partialTicks);
+	}
         renderComponents(context, mouseX, mouseY);
     }
 
