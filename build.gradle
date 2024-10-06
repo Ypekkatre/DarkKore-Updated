@@ -87,7 +87,11 @@ jar {
 // configure the maven publication
 publishing {
     publications {
-        mavenJava(MavenPublication) {
+        maven(MavenPublication) {
+            groupId = 'com.github.Ypekkatre'
+            artifactId = 'DarkKore-Updated'
+            version = '0.3.5'
+            
             from components.java
         }
     }
