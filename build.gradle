@@ -6,7 +6,7 @@ plugins {
 
 apply from: 'https://raw.githubusercontent.com/DarkKronicle/GradleScripts/main/gradle/publish.gradle'
 
-version = "${project.mod_version}-${project.minecraft_version}"
+version = "${project.mod_version}+${project.minecraft_version}"
 group = project.maven_group
 
 repositories {
