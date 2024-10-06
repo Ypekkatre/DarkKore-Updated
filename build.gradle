@@ -1,10 +1,10 @@
 plugins {
     id 'fabric-loom' version '1.5-SNAPSHOT'
     id 'maven-publish'
-    id "io.freefair.lombok" version "8.0.1"
+    id "io.freefair.lombok" version "8.10.2"
 }
 
-apply from: 'https://raw.githubusercontent.com/DarkKronicle/GradleScripts/main/gradle/publish.gradle'
+apply from: 'https://raw.githubusercontent.com/Ypekkatre/GradleScripts/main/gradle/publish.gradle'
 
 version = "${project.mod_version}-${project.minecraft_version}"
 group = project.maven_group
